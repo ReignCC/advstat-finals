@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="hypoCSS.css">
-  <title>CALC-PHY Momentum</title>
+  <title>ADVSTAT</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="icon" type="image/png" href="/images/calc-favicon.png">
 </head>
@@ -14,10 +14,10 @@
     <div class="test">
       <div class="bton-pad">
         <button type="button" class="button-out" id="hypothesisBTN"><a href="../index.html">GO TO SIMPLE LINEAR REGRESSION</a></button>
-        <button type="button" class="button-out" id="calculate-again"><a href="/index.html">CALCULATE AGAIN</a></button>
+        <button type="button" class="button-out" id="calculate-again"><a href="/hypothesis-testing/hypothesis.html">CALCULATE AGAIN</a></button>
       </div>
 
-      <form class="form" id="simple-linear-regression">
+      <form class="form" id="hypothesis-test">
         <div class="title">ADVSTAT++<br><span>Hypothesis Testing</span></div>
         <div class="input-con">
           <input type="text" placeholder="Null Hypothesis (H₀):" name="NULLHYPO" class="input" id="NULLHYPO">
@@ -27,12 +27,10 @@
           <input type="text" placeholder="Alternative Hypothesis (H₁):" name="ALTHYPO" class="input" id="ALTHYPO">
         </div>
 
-        <!-- New input field for Standard Deviation -->
         <div class="input-con">
           <input type="text" placeholder="Standard Deviation (σ):" name="std-deviation" class="input" id="std-deviation">
         </div>
 
-        <!-- New input fields for X and N -->
         <div class="input-con">
           <input type="text" placeholder="X value:" name="X" class="input" id="X">
         </div>
@@ -40,13 +38,19 @@
         <div class="input-con">
           <input type="text" placeholder="N value:" name="N" class="input" id="N">
         </div>
-        
+
+        <div class="input-con">
+          <input type="text" placeholder="Population Mean:" name="population" class="input" id="population">
+        </div>
+
         <div class="significance-container">
           <label for="significance-level" class="significance-label">Significance Level (α):</label>
           <select name="significance-level" id="significance-level" class="dropdown">
+            <option value="0.1">0.1</option>
             <option value="0.2">0.2</option>
             <option value="0.15">0.15</option>
-            <option value="0.10">0.10</option>
+            <option value="0.1">0.1</option>
+            <option value="0.075">0.075</option>
             <option value="0.05">0.05</option>
             <option value="0.02">0.02</option>
             <option value="0.01">0.01</option>
@@ -66,8 +70,10 @@
       <div class="pad">
         <div class="answer" id="answer">
           <div id="result" class="result"></div>
+          <div class="curvePATH">
+            <canvas id="normalCurveCanvas" width="400" height="300"></canvas> <!-- Normal curve canvas -->
           </div>
-          </div>
+          
         </div>
       </div>
     </div>

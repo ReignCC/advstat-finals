@@ -136,7 +136,7 @@ canvas {
 
 .result{
   width: 365px;
-  height: 120px;
+  height: 210px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
@@ -293,7 +293,11 @@ canvas {
   transform: translateY(0);
 }
 
+.curvePATH{
+  padding: 50px 0px;
+}
 
+/* 
 @media (max-width: 450px) {
 
   .input {
@@ -303,9 +307,9 @@ canvas {
   .result{
     width: 280px;
   }
-}
+} */
 
-@media (max-width: 385px) {
+/* @media (max-width: 385px) {
 
   .input {
       width: 150px;
@@ -314,4 +318,4 @@ canvas {
   .result{
     width: 260px;
   }
-}
+} */
