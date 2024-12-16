@@ -1,0 +1,268 @@
+/* You may find that some of the classes here are of similar name to the ones from impulse. The reason why is because I first started creating the Impulse side then moved on to Momentum. So, in order not to take much time, I just copied the same HTML, CSS, and JS of Impulse to Momentum. Then just changed some calculations and some conversion scenarios.  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
+
+body {
+  /* background: black; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+  background-color: #eeeeee;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* adjusted to column to stack items */
+}
+
+.test {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.bton-pad{
+  padding: 10px;
+}
+
+.form {
+  --input-focus: #000000;
+  --font-color: #000000;
+  --font-color-sub: #000000;
+  --bg-color: #fff;
+  --main-color: #000000;
+  padding: 30px;
+  background: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-color: black;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+canvas {
+  width: 100px;
+}
+
+.title span {
+  color: rgb(26, 26, 26);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#scatterPlot {
+  border: 2px solid black;
+}
+
+.scatterPad{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 35px 0px;
+}
+
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.answer{
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 20px;
+  background: rgb(252, 252, 252);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  display: none;
+}
+
+.pad{
+  padding: 10px;
+}
+
+.result{
+  width: 365px;
+  height: 120px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.unit-cs {
+  width: 90px;
+  height: 54px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+
+.button-confirm {
+  margin: 10px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.button-confirm:hover {
+  transform: translateY(-0.33em);
+}
+
+.button-confirm:active{
+  transform: translateY(0);
+}
+
+.button-round {
+  margin: 10px auto 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  font-family: ;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.button-round:hover {
+  transform: translateY(-0.33em);
+}
+
+.button-round:active{
+  transform: translateY(0);
+}
+
+.button-out {
+  margin: 5px auto 0 auto;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(243, 243, 243);
+  box-shadow: 4px 4px rgb(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  
+  cursor: pointer;
+  padding: 10px 0px;
+}
+
+.button-out:hover {
+  transform: translateY(-0.33em);
+}
+
+.button-out:active{
+  transform: translateY(0);
+}
+
+
+@media (max-width: 450px) {
+
+  .input {
+      width: 185px;
+  }
+
+  .result{
+    width: 280px;
+  }
+}
+
+@media (max-width: 385px) {
+
+  .input {
+      width: 150px;
+  }
+
+  .result{
+    width: 260px;
+  }
+}
