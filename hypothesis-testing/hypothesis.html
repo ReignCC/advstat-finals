@@ -13,28 +13,59 @@
   <section>
     <div class="test">
       <div class="bton-pad">
-        <button type="button" class="button-out" id="hypothesisBTN"><a href="/index.html">HYPOTHESIS TESTING</a></button>
+        <button type="button" class="button-out" id="hypothesisBTN"><a href="../index.html">GO TO SIMPLE LINEAR REGRESSION</a></button>
         <button type="button" class="button-out" id="calculate-again"><a href="/index.html">CALCULATE AGAIN</a></button>
       </div>
 
       <form class="form" id="simple-linear-regression">
-        <div class="title">ADVSTAT++<br><span>Simple Linear Regression</span></div>
+        <div class="title">ADVSTAT++<br><span>Hypothesis Testing</span></div>
         <div class="input-con">
-          <input type="text" placeholder="0,1,2,3,4" name="xvalues" class="input" id="xvalues">
+          <input type="text" placeholder="Null Hypothesis (H₀):" name="NULLHYPO" class="input" id="NULLHYPO">
         </div>
 
         <div class="input-con">
-          <input type="text" placeholder="0,1,2,3,4" name="yvalues" class="input" id="yvalues">
+          <input type="text" placeholder="Alternative Hypothesis (H₁):" name="ALTHYPO" class="input" id="ALTHYPO">
+        </div>
+
+        <!-- New input field for Standard Deviation -->
+        <div class="input-con">
+          <input type="text" placeholder="Standard Deviation (σ):" name="std-deviation" class="input" id="std-deviation">
+        </div>
+
+        <!-- New input fields for X and N -->
+        <div class="input-con">
+          <input type="text" placeholder="X value:" name="X" class="input" id="X">
+        </div>
+
+        <div class="input-con">
+          <input type="text" placeholder="N value:" name="N" class="input" id="N">
         </div>
         
+        <div class="significance-container">
+          <label for="significance-level" class="significance-label">Significance Level (α):</label>
+          <select name="significance-level" id="significance-level" class="dropdown">
+            <option value="0.2">0.2</option>
+            <option value="0.15">0.15</option>
+            <option value="0.10">0.10</option>
+            <option value="0.05">0.05</option>
+            <option value="0.02">0.02</option>
+            <option value="0.01">0.01</option>
+          </select>
+        </div>
+
+        <div class="tail-type-container">
+          <select name="tail-type" id="tail-type" class="dropdown2">
+            <option value="two-tailed">Two-Tailed</option>
+            <option value="one-tailed">One-Tailed</option>
+          </select>
+        </div>
+
         <button type="button" class="button-confirm" id="calculate">CALCULATE</button>
       </form>
 
       <div class="pad">
         <div class="answer" id="answer">
           <div id="result" class="result"></div>
-          <div class="scatterPad">
-            <canvas id="scatterPlot"></canvas>
           </div>
           </div>
         </div>
@@ -42,6 +73,6 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="hypoJS.js"></script>
 </body>
 </html>

@@ -215,13 +215,62 @@ canvas {
   transform: translateY(-0.33em);
 }
 
+.significance-container,
+.tail-type-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.significance-label,
+.tail-type-label {
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+  margin-right: 10px;
+}
+
+.dropdown {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  outline: none;
+  color: var(--font-color);
+}
+
+.dropdown2 {
+  width: 275px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  outline: none;
+  color: var(--font-color);
+}
+
+.dropdown:focus {
+  border: 2px solid var(--input-focus);
+}
+
+
 .button-round:active{
   transform: translateY(0);
 }
 
 .button-out {
   margin: 5px auto 0 auto;
-  width: 250px;
+  width: 300px;
   height: 40px;
   border-radius: 5px;
   border: 2px solid rgb(0, 0, 0);
